@@ -1,0 +1,377 @@
+﻿:root {
+    --primary: #00695c;
+    --light-bg: #00897b;
+    --dark-footer: #1a3d3f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--primary) 100%);
+    color: white;
+    min-height: 100vh;
+}
+
+/* NAVBAR - Perfect alignment */
+.navbar {
+    background: white !important;
+    padding: 0.8rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-brand img {
+    height: 38px;
+    margin-right: 7px;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--primary) !important;
+    font-size: 1.7rem;
+}
+
+.nav-link {
+    color: #444 !important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.5rem !important;
+    transition: color 0.3s;
+}
+
+    .nav-link:hover {
+        color: var(--primary) !important;
+    }
+
+.btn-book {
+    color: var(--primary);
+    border: 2.5px solid var(--primary);
+    background: transparent;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50px;
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.btn-started {
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 0.5rem;
+    border-radius: 50px;
+    font-weight: 400;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 130px 0 160px;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-certified {
+    background: rgba(255,255,255,0.24);
+    backdrop-filter: blur(10px);
+    padding: 12px 34px;
+    border-radius: 50px;
+    font-size: 0.98rem;
+    display: inline-block;
+    margin-bottom: 32px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+h1.display-3 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
+}
+
+.lead {
+    font-size: 1.35rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    opacity: 0.96;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin: 22px 0;
+    font-size: 1.22rem;
+    font-weight: 500;
+}
+
+    .feature-item i {
+        color: #80cbc4;
+        margin-right: 16px;
+        font-size: 1.4rem;
+    }
+
+/* STAT CARDS - With proper gaps beautiful floating animation */
+.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* Increased gap */
+    max-width: 580px;
+    margin: 50px auto 0;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.16);
+    backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 44px 28px;
+    width: 280px;
+    icon: auto;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.22);
+    transition: all 0.4s ease;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.stat-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.stat-card:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.stat-card:nth-child(3) {
+    animation-delay: 3s;
+}
+
+.stat-card:nth-child(4) {
+    animation-delay: 4.5s;
+}
+
+.stat-number {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.stat-label {
+    font-size: 1.2rem;
+    opacity: 0.92;
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background: #1f4d4f;
+    color: #c0dede;
+    font-size: 14px;
+}
+
+/* Top Subscribe + Rating Section */
+.footer-top {
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.subscribe-box {
+    display: inline-flex;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+    .subscribe-box input {
+        padding: 12px 15px;
+        width: 320px;
+        border: none;
+        border-radius: 6px 0 0 6px;
+        font-size: 15px;
+        background: #2d6c6f;
+        color: white;
+    }
+
+        .subscribe-box input::placeholder {
+            color: #a0c4c4;
+        }
+
+    .subscribe-box button {
+        padding: 12px 30px;
+        border: none;
+        background: white;
+        color: #1f4d4f;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 0 6px 6px 0;
+    }
+
+.rating {
+    font-size: 15px;
+}
+
+    .rating i {
+        color: #ffd700;
+        margin-right: 5px;
+    }
+
+.happy-students {
+    color: #ff6b6b;
+    margin-right: 15px;
+}
+
+/* Main Footer - 4 Columns */
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-col {
+    min-width: 220px;
+    flex: 1;
+}
+
+    .footer-col h4 {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+            .footer-col ul li i {
+                margin-right: 10px;
+                color: #4ecdc4;
+                font-size: 12px;
+            }
+
+            .footer-col ul li a {
+                color: #c0dede;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+                .footer-col ul li a:hover {
+                    color: white;
+                    text-decoration: underline;
+                }
+
+/* Logo Column */
+.logo-section img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+    .logo-text strong {
+        color: white;
+        font-size: 24px;
+        display: block;
+    }
+
+    .logo-text span {
+        font-size: 13px;
+        color: #4ecdc4;
+    }
+
+.certified-badge {
+    background: rgba(255,255,255,0.1);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* Contact Icons */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+    .contact-item i {
+        margin-right: 12px;
+        color: #4ecdc4;
+        width: 20px;
+    }
+
+/* Social Icons */
+.social-links {
+    margin-top: 20px;
+}
+
+    .social-links a {
+        display: inline-block;
+        background: #2d6c6f;
+        color: white;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 8px;
+        margin-right: 8px;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+        .social-links a:hover {
+            background: #4ecdc4;
+            transform: translateY(-3px);
+        }
+
+/* Bottom Bar */
+.footer-bottom {
+    background: #183c3e;
+    padding: 20px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+    .footer-bottom a {
+        color: #c0dede;
+        text-decoration: none;
+        margin: 0 12px;
+    }
+
+        .footer-bottom a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+.made-with {
+    color: #ff6b6b;
+}
