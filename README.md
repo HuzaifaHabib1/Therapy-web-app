@@ -1,202 +1,183 @@
-SereneMind Clinic – Therapy Booking Web Application
+# 🧠 SereneMind Clinic – Therapy Booking Web Application
 
-SereneMind Clinic is a full-stack web application developed using ASP.NET Web Forms (ASP.NET Framework) and SQL Server. The platform enables users to book therapy sessions, manage appointments, and receive automated email notifications, while administrators can manage therapists and bookings through a secure admin panel.
+**SereneMind Clinic** is a full-stack web application developed using **ASP.NET Web Forms (ASP.NET Framework)** and **SQL Server**. The platform enables users to book therapy sessions, manage appointments, and receive automated email notifications, while administrators can manage therapists and bookings through a secure admin panel.
 
-This project was built for academic and portfolio purposes and demonstrates real-world web application features such as authentication, role-based access, database integration, and automated email workflows.
+This project was built for **academic and portfolio purposes** and demonstrates real-world web application features such as authentication, role-based access, database integration, and automated email workflows.
 
-Features
-Public Pages
+ ---
 
-Home Page
+## Features
 
-About Page
+### Public Pages
 
-Services Page
+- Home Page
+- About Page
+- Services Page
+- FAQs Page
+- Contact Page
 
-FAQs Page
+ ---
 
-Contact Page
+### User Features
 
-User Features
+- User registration and login
+- User dashboard
+- View booking history
+- Book therapy sessions by selecting:
+  - Therapy type (4 sample therapies)
+   - Therapist
+  - Date
+  - Time slot
+- Upload payment screenshot to confirm booking
+- Cancel existing bookings
+- Automatic email notifications on:
+   - Booking confirmation (after admin approval)
+   -  Booking cancellation
 
-User registration and login
+ ---
 
-User dashboard
+### Admin Features
 
-View booking history
+- Secure admin login (credentials stored in SQL Server)
+- Admin dashboard
+- View all bookings
+- Accept or reject new booking requests
+- Cancel upcoming bookings
+- Automated email notifications sent to:
+   - User
+    - Assigned therapist
+- Auto-generated Google Meet / Gmail link included in confirmation emails
 
-Book therapy sessions by selecting:
+ ---
 
-Therapy type (4 sample therapies)
+### Automated Email System
 
-Therapist
+**On admin approval**
+- Confirmation email sent to both user and therapist
+- Includes booking details and auto-generated Gmail/meeting link
 
-Date
+**On user cancellation**
+- Cancellation email sent to both user and therapist
 
-Time slot
+ ---
 
-Upload payment screenshot to confirm booking
+## Tech Stack
 
-Cancel existing bookings
+### Frontend
 
-Automatic email notifications on:
+- ASP.NET Web Forms (.aspx)
+- HTML5
+- CSS3
 
-Booking confirmation (after admin approval)
+### Backend
 
-Booking cancellation
+- ASP.NET Framework
+- C#
+- Code-behind architecture (.aspx.cs)
+- ADO.NET
 
-Admin Features
+### Database
 
-Secure admin login (credentials stored in SQL Server)
+- Microsoft SQL Server (SSMS)
 
-Admin dashboard
+### Other
 
-View all bookings
+- Session-based authentication
+- SMTP email integration
 
-Accept or reject new booking requests
+ ---
 
-Cancel upcoming bookings
+## Authentication & Roles
 
-Automated email notifications sent to:
+### Admin
 
-User
+- Credentials stored in SQL Server
+- Full access to admin panel and booking management
 
-Assigned therapist
+### User
 
-Auto-generated Google Meet / Gmail link included in confirmation emails
+- Can sign up and log in
+- Access to user dashboard and booking system
 
-Automated Email System
+ ---
 
-On admin approval:
+## Demo Credentials (For Portfolio Use)
 
-Confirmation email sent to both user and therapist
+### Admin Login
 
-Includes booking details and auto-generated Gmail/meeting link
+- **Username:** `admin@edchat.pk`
+- **Password:** `Admin123`
 
-On user cancellation:
+> (Demo credentials are included intentionally for evaluation and portfolio demonstration.)
 
-Cancellation email sent to both user and therapist
+ ---
 
-Tech Stack
+## Database Setup
 
-Frontend
+1. Open **SQL Server Management Studio**
+2. Create a database named:
 
-ASP.NET Web Forms (.aspx)
+`TherapyDB`
 
-HTML5
+3. Execute the provided SQL scripts (if included)
+4. Ensure the connection string in Web.config matches your SQL Server instance
 
-CSS3
+ ---
 
-Backend
+### Example:
 
-ASP.NET Framework
-
-C#
-
-Code-behind architecture (.aspx.cs)
-
-ADO.NET
-
-Database
-
-Microsoft SQL Server (SSMS)
-
-Other
-
-Session-based authentication
-
-SMTP email integration
-
-
-Authentication & Roles
-
-Admin
-
-Credentials stored in SQL Server
-
-Full access to admin panel and booking management
-
-User
-
-Can sign up and log in
-
-Access to user dashboard and booking system
-
-Demo Credentials (For Portfolio Use)
-
-Admin Login
-
-Username: admin@edchat.pk
-
-Password: Admin123
-
-(Demo credentials are included intentionally for evaluation and portfolio demonstration.)
-
-Database Setup
-
-Open SQL Server Management Studio
-
-Create a database named:
-
-TherapyDB
-
-
-Execute the provided SQL scripts (if included)
-
-Ensure the connection string in Web.config matches your SQL Server instance
-
-Example:
-
-<connectionStrings>
-  <add name="TherapyDB"
+```xml
+ <connectionStrings>
+   <add name="TherapyDB"
        connectionString="Server=(localdb)\MSSQLLocalDB;Database=TherapyDB;Integrated Security=True;"
        providerName="System.Data.SqlClient" />
-</connectionStrings>
+ </connectionStrings>
+```
+---
 
-How to Run the Project
+### How to Run the Project
 
-Open the solution (.sln) file in Visual Studio
+1. Open the solution (.sln) file in Visual Studio
+2. Restore NuGet packages (if prompted)
+3. Set the project as Startup Project
+4. Press F5 to run the application
+5. Ensure SQL Server is running
 
-Restore NuGet packages (if prompted)
+ ---
 
-Set the project as Startup Project
+### Project Structure Overview
 
-Press F5 to run the application
+- `.aspx` – UI pages
+- `.aspx.cs` – Server-side logic (code-behind)
+- `Web.config` – Configuration and database connection
+- `SQL Server` – Stores users, bookings, therapists, and admin credentials
 
-Ensure SQL Server is running
+ ---
 
-Project Structure Overview
+## Contributors
 
-.aspx – UI pages
+- Huzaifa Habib
+- Sana Riaz
 
-.aspx.cs – Server-side logic (code-behind)
 
-Web.config – Configuration and database connection
+ ---
 
-SQL Server – Stores users, bookings, therapists, and admin credentials
+### License
 
-Contributors
+- This project is developed for educational and portfolio purposes only.
 
-Huzaifa Habib
+--- 
 
-Sana Riaz
 
-License
-
-This project is developed for educational and portfolio purposes only.
-
-Portfolio Note
+## Portfolio Note
 
 This project demonstrates:
+- Full-stack ASP.NET Web Forms development
+- Role-based authentication
+- Database-driven CRUD operations
+- Real-world booking workflow
+- Automated email notifications
+- Version control using Git & GitHub
 
-Full-stack ASP.NET Web Forms development
 
-Role-based authentication
 
-Database-driven CRUD operations
-
-Real-world booking workflow
-
-Automated email notifications
-
-Version control using Git & GitHub
